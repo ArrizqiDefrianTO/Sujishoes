@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Adm_Stock_Inn extends CI_Controller
+class Adm_Repots_Sales extends CI_Controller
 {
 
     public function __construct()
