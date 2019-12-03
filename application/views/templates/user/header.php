@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +10,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>css/style.css" rel="stylesheet" type="text/css">
-    <title><?= $title;?></title>
-  </head>
-  <body>
-  <div class="panel-atas"><a href="<?php echo base_url() ?>panel_informasi"><span class="ml-4 pp">Discount 15%Off
-<img src="<?php echo base_url(); ?>assets/img/pna.png" alt="workingspace" class="img-fluid  p-1 ml-5 mb-2"></span>
-</a></div>  
+    <title><?= $title; ?></title>
+</head>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+<body>
+    <div class="panel-atas"><a href="<?php echo base_url() ?>panel_informasi"><span class="ml-4 pp">Discount 15%Off
+                <img src="<?php echo base_url(); ?>assets/img/pna.png" alt="workingspace" class="img-fluid  p-1 ml-5 mb-2"></span>
+        </a></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
         <div class="container">
 
             <a class="navbar-brand" href="<?php echo base_url() ?>"> <img src="<?php echo base_url(); ?>assets/img/ss.jpeg" width="30" height="30" alt=""><span class="ml-2 "> Suji Shoes</span></a>
@@ -35,14 +37,13 @@
                         <a class="nav-link" href="<?php echo base_url() ?>Contact_us">Contact us</a>
                     </li>
 
-                   
 
-                   
+
+
                     <li class="nav-item mt-2 ml-auto">
-                        <a class="" href="#" aria-disabled="true"><i class="fas fa-users-cog fa-2x  "style="color: 	#00CED1"> </i></a>
+                        <a class="" href="<?php echo base_url() ?>Auth/Login" aria-disabled="true"><i class="fas fa-users-cog fa-2x  " style="color: 	#00CED1"> </i></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
