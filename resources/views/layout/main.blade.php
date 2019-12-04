@@ -76,32 +76,28 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="index.html">Home</a>
+								<a href="{{url ('/')}}">Home</a>
 
 							</li>
 
 							<li>
-								<a href="product.html">Shop</a>
+								<a href="{{url ('/shop')}}">Shop</a>
 							</li>
 
-							<li class="sale-noti">
-								<a href="product.html">Sale</a>
+
+
+
+
+							<li>
+								<a href="{{url ('/blog')}}">Blog</a>
 							</li>
 
 							<li>
-								<a href="cart.html">Features</a>
+								<a href="{{url ('/about')}}">About</a>
 							</li>
 
 							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-
-							<li>
-								<a href="about.html">About</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
+								<a href="{{url ('/contact')}}">Contact</a>
 							</li>
 						</ul>
 					</nav>

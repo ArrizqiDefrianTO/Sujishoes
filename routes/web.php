@@ -12,3 +12,7 @@
 */
 
 Route::resource('/', 'PagesController');
+Route::resource('about', 'AboutController');
+Route::resource('shop', 'ShopController');
+Route::resource('contact', 'ContactController');
+Route::resource('blog', 'blogController');
