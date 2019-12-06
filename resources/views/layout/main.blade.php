@@ -81,7 +81,7 @@
 							</li>
 
 							<li>
-								<a href="{{url ('/shop')}}">Shop</a>
+								<a href="{{url ('/Products')}}">Shop</a>
 							</li>
 
 
@@ -606,6 +606,10 @@
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,
 			dropdownParent: $('#dropDownSelect1')
+		});
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect2')
 		});
 	</script>
 	<!--===============================================================================================-->
