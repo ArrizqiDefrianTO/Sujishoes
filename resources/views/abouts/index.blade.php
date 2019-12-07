@@ -13,9 +13,9 @@
 <section class="bgwhite p-t-66 p-b-38">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 p-b-30">
+            <div class="col-md-4 p-b-30 mt-4">
                 <div class="hov-img-zoom">
-                    <img src="user/images/about.png" alt="IMG-ABOUT">
+                    <img src="user/images/icons/logo2.png" alt="IMG-ABOUT">
                 </div>
             </div>
 

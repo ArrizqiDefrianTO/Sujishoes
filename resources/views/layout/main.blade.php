@@ -67,9 +67,9 @@
 
 			<div class="wrap_header">
 				<!-- Logo -->
-				<a href="index.html" class="logo">
-					<img src="user/images/icons/logo2.png" alt="IMG-LOGO">
-				</a>
+				<div class="logo">
+					<img src="user/images/logo 2.png" alt="IMG-LOGO">
+				</div>
 
 				<!-- Menu -->
 				<div class="wrap_menu">
@@ -95,7 +95,7 @@
 							</li>
 
 							<li>
-								<a href="{{url ('/contact/create')}}">Contact</a>
+								<a href="{{url ('/contact')}}">Contact</a>
 							</li>
 						</ul>
 					</nav>
