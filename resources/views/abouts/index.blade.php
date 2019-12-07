@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-06.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(user/images/banner4.jpg);">
     <h2 class="l-text2 t-center">
         About
     </h2>
@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-4 p-b-30">
                 <div class="hov-img-zoom">
-                    <img src="images/banner-14.jpg" alt="IMG-ABOUT">
+                    <img src="user/images/about.png" alt="IMG-ABOUT">
                 </div>
             </div>
 

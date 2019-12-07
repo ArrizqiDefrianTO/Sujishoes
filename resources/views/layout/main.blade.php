@@ -88,16 +88,14 @@
 
 
 
-							<li>
-								<a href="{{url ('/blog')}}">Blog</a>
-							</li>
+
 
 							<li>
 								<a href="{{url ('/about')}}">About</a>
 							</li>
 
 							<li>
-								<a href="{{url ('/contact')}}">Contact</a>
+								<a href="{{url ('/contact/create')}}">Contact</a>
 							</li>
 						</ul>
 					</nav>
@@ -353,9 +351,7 @@
 						<a href="cart.html">Features</a>
 					</li>
 
-					<li class="item-menu-mobile">
-						<a href="blog.html">Blog</a>
-					</li>
+
 
 					<li class="item-menu-mobile">
 						<a href="about.html">About</a>
