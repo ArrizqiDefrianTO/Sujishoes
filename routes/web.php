@@ -12,7 +12,11 @@
 */
 
 Route::resource('/', 'PagesController');
-Route::resource('about', 'AboutController');
 Route::resource('Products', 'ProductsController');
+Route::resource('about', 'AboutController');
 Route::resource('contact', 'ContactController');
 Route::resource('blog', 'blogController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
