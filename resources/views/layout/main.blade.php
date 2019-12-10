@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="user/images/icons/favicon.png" />
+	<link rel="icon" type="image/png" href="{{ asset ('user/images/icons/favicon.png') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/bootstrap/css/bootstrap.min.css') }}">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
@@ -32,8 +32,8 @@
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="user/vendor/lightbox2/css/lightbox.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/css/util.css">
-	<link rel="stylesheet" type="text/css" href="user/css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/css/main.css') }}">
 	<!--===============================================================================================-->
 </head>
 
