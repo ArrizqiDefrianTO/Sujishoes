@@ -24,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('contacts.index');
     }
 
     /**
@@ -35,7 +35,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'no_telp' => 'required|size:12',
+            'email' => 'required',
+            'description' => 'required'
+
+        ]);
+
+        Contact::create($request->all());
+        return redirect('/Contacts')->with('status', 'Data Mahasiswa Berhasil Ditambahkan');
     }
 
     /**
