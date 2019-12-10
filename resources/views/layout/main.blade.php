@@ -84,12 +84,6 @@
 								<a href="{{url ('/Products')}}">Shop</a>
 							</li>
 
-
-
-
-
-
-
 							<li>
 								<a href="{{url ('/about')}}">About</a>
 							</li>
@@ -103,7 +97,7 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
+					<a href="{{url ('/login')}}" class="header-wrapicon1 dis-block">
 						<img src="user/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
