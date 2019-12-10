@@ -28,3 +28,7 @@ Route::resource('about', 'AboutController');
 Route::resource('Products', 'ProductsController');
 Route::resource('contact', 'ContactController');
 Route::resource('blog', 'blogController');
+Route::get('login', 'AuthController@getLogin');
+Route::post('login', 'AuthController@postLogin')->name('login');
+Route::get('register', 'AuthController@getRegister');
+Route::post('register', 'AuthController@postRegister')->name('register');
