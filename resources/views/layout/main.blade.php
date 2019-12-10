@@ -6,35 +6,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="user/images/icons/favicon.png" />
-	<link rel="icon" type="image/png" href="user/fonts/font-awesome-4.7.0/css/font-awesome.min.css'">
+	<link rel="icon" type="image/png" href="{{ asset ('user/images/icons/favicon.png') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/bootstrap/css/bootstrap.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/fonts/themify/themify-icons.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/fonts/elegant-font/html-css/style.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/animate/animate.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/css-hamburgers/hamburgers.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/animsition/css/animsition.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/select2/select2.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/daterangepicker/daterangepicker.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/slick/slick.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/lightbox2/css/lightbox.min.css') }}">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="user/css/util.css">
-	<link rel="stylesheet" type="text/css" href="user/css/main.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('user/css/main.css') }}">
 	<!--===============================================================================================-->
 </head>
 
@@ -69,7 +68,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<div class="logo">
-					<img src="user/images/logo 2.png" alt="IMG-LOGO">
+					<img src="{{ asset ('user/images/logo 2.png') }}" alt="IMG-LOGO">
 				</div>
 
 				<!-- Menu -->
@@ -105,13 +104,13 @@
 				<!-- Header Icon -->
 				<div class="header-icons">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="user/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2">
-						<img src="user/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="{{ asset ('user/images/icons/icon-header-02.png') }}" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -119,7 +118,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="{{ asset ('images/item-cart-01.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -135,7 +134,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="user/images/item-cart-02.jpg" alt="IMG">
+										<img src="{{ asset ('user/images/item-cart-02.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -151,7 +150,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="user/images/item-cart-03.jpg" alt="IMG">
+										<img src="{{ asset ('user/images/item-cart-03.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -195,7 +194,7 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
-				<img src="user/images/icons/logo.png" alt="IMG-LOGO">
+				<img src="{{ asset ('user/images/icons/logo.png') }}" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->
@@ -203,13 +202,13 @@
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
 					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="user/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="{{ asset ('images/icons/icon-header-02.png') }}" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -217,7 +216,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="{{ asset ('images/item-cart-01.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -233,7 +232,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="{{ asset ('images/item-cart-02.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -249,7 +248,7 @@
 
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="{{ asset ('images/item-cart-03.jpg') }}" alt="IMG">
 									</div>
 
 									<div class="header-cart-item-txt">
@@ -551,23 +550,23 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="user/images/icons/paypal.png" alt="IMG-PAYPAL">
+				<img class="h-size2" src="{{ asset ('user/images/icons/paypal.png" alt="IMG-PAYPAL') }}">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="user/images/icons/visa.png" alt="IMG-VISA">
+				<img class="h-size2" src="{{ asset ('user/images/icons/visa.png') }}" alt="IMG-VISA">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="user/images/icons/mastercard.png" alt="IMG-MASTERCARD">
+				<img class="h-size2" src="{{ asset ('user/images/icons/mastercard.png') }}" alt="IMG-MASTERCARD">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="user/images/icons/express.png" alt="IMG-EXPRESS">
+				<img class="h-size2" src="{{ asset ('user/images/icons/express.png') }}" alt="IMG-EXPRESS">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="user/images/icons/discover.png" alt="IMG-DISCOVER">
+				<img class="h-size2" src="{{ asset ('user/images/icons/discover.png') }}" alt="IMG-DISCOVER">
 			</a>
 
 			<div class="t-center s-text8 p-t-20">
@@ -591,14 +590,14 @@
 
 
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/animsition/js/animsition.min.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="user/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/bootstrap/js/popper.js') }}"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/select2/select2.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/select2/select2.min.js') }}"></script>
 	<script type="text/javascript">
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,
@@ -610,14 +609,14 @@
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/slick/slick.min.js"></script>
-	<script type="text/javascript" src="user/js/slick-custom.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/slick/slick.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset ('user/js/slick-custom.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/countdowntime/countdowntime.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/lightbox2/js/lightbox.min.js') }}"></script>
 	<!--===============================================================================================-->
-	<script type="text/javascript" src="user/vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript" src="{{ asset ('user/vendor/sweetalert/sweetalert.min.js') }}"></script>
 	<script type="text/javascript">
 		$('.block2-btn-addcart').each(function() {
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -635,7 +634,7 @@
 	</script>
 
 	<!--===============================================================================================-->
-	<script src="user/js/main.js"></script>
+	<script src="{{ asset ('user/js/main.js') }}"></script>
 
 </body>
 
