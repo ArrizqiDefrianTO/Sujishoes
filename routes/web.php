@@ -12,11 +12,19 @@
 */
 
 Route::resource('/', 'PagesController');
-Route::resource('Products', 'ProductsController');
+route::get('/Products', 'ProductsController@index');
+
+route::get('/Products/{{id}}', 'ProductsController@show');
+
 Route::resource('about', 'AboutController');
+
+// route::get('/students', 'StudentsController@index');
+// route::get('/students/create', 'StudentsController@create');
+// route::get('/students/{student}', 'StudentsController@show');
+// route::post('/students', 'StudentsController@store');
+// Route::get('/Products', 'ProductsController@index');
+// Route::get('/Products/', 'ProductsController@show');
+
+Route::resource('Products', 'ProductsController');
 Route::resource('contact', 'ContactController');
 Route::resource('blog', 'blogController');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
