@@ -22,7 +22,7 @@ class AuthController extends Controller
     public function getLogin()
     {
         //
-        return view('auths.login');
+        return view('auths.login2');
     }
 
     public function postLogin(Request $request) 
@@ -35,7 +35,7 @@ class AuthController extends Controller
     public function getRegister()
     {
         //
-        return view('auths.register');
+        return view('auths.register2');
     }
 
     public function postRegister(Request $request) 
@@ -52,7 +52,7 @@ class AuthController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
-        return redirect('/login');
+        return redirect('/login2');
     }
 
     /**
