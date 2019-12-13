@@ -72,38 +72,12 @@
 				</div>
 
 				<!-- Menu -->
-				<div class="wrap_menu">
-					<nav class="menu">
-						<ul class="main_menu">
-							<li>
-								<a href="{{url ('/')}}">Home</a>
-
-							</li>
-
-							<li>
-								<a href="{{url ('/Products')}}">Shop</a>
-							</li>
-
-
-
-
-
-
-
-							<li>
-								<a href="{{url ('/about')}}">About</a>
-							</li>
-
-							<li>
-								<a href="{{url ('/contact')}}">Contact</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+				@include('layouts.module.menu')
+				
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="#" class="header-wrapicon1 dis-block">
+					<a href="{{url ('/login')}}" class="header-wrapicon1 dis-block">
 						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
@@ -430,38 +404,7 @@
 				</div>
 			</div>
 
-			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-				<h4 class="s-text12 p-b-30">
-					Categories
-				</h4>
-
-				<ul>
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Men
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Women
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Dresses
-						</a>
-					</li>
-
-					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Sunglasses
-						</a>
-					</li>
-				</ul>
-			</div>
-
+		
 			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
 				<h4 class="s-text12 p-b-30">
 					Links

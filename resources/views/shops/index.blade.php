@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layouts.ecommerce')
 @section('title','Shop SujiShoes')
 @section('content')
 
@@ -6,7 +6,7 @@
 
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(user/images/banner4.jpg);">
+<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url({{ asset('user/images/banner4.jpg') }});">
 	<h2 class="l-text2 t-center">
 		Women
 	</h2>
@@ -27,40 +27,30 @@
 						Categories
 					</h4>
 
-					<ul class="p-b-54">
-						<li class="p-t-4">
-							<a href="#" class="s-text13 active1">
-								All
-							</a>
+					<ul class="list" >
+						@foreach ($categories as $category)
+						<li>
+						  
+							  <!-- MODIFIKASI BAGIAN INI -->
+							<strong><a href="{{ url('/category/' . $category->slug) }}" class="font-weight-bold">{{ $category->name }}</a></strong>
+						  <!-- MODIFIKASI BAGIAN INI -->
+	
+							@foreach ($category->child as $child)
+						  
+							  <!-- MODIFIKASI BAGIAN INI -->
+							<ul class="list" style="display: block">
+							<!-- MODIFIKASI BAGIAN INI -->
+							  
+								<li>
+									<a href="{{ url('/category/' . $child->slug) }}" class="ml-4">{{ $child->name }}</a>
+								</li>
+							</ul>
+							@endforeach
 						</li>
-
-						<li class="p-t-4">
-							<a href="#" class="s-text13">
-								Women
-							</a>
-						</li>
-
-						<li class="p-t-4">
-							<a href="#" class="s-text13">
-								Men
-							</a>
-						</li>
-
-						<li class="p-t-4">
-							<a href="#" class="s-text13">
-								Kids
-							</a>
-						</li>
-
-						<li class="p-t-4">
-							<a href="#" class="s-text13">
-								Accesories
-							</a>
-						</li>
+						@endforeach
 					</ul>
-
-					<!--  -->
-					<h4 class="m-text14 p-b-32">
+				
+					<h4 class="m-text14 p-b-32 mt-4">
 						Filters
 					</h4>
 
@@ -171,11 +161,11 @@
 				<!-- Product -->
 				<div class="row mt-3">
 					<!-- Block2 -->
-					@foreach($products as $product)
+					@forelse($products as $product)
 					<div class="col-sm-12 col-md-6 col-lg-4 p-b-50 ">
 						<div class="block2 ">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="user/images/{{$product->image}}" alt="IMG-PRODUCT">
+								<img src="{{asset('user/images/'. $product->image )}}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -194,18 +184,28 @@
 
 							<div class="block2-txt p-t-20">
 
-								{{$product->name}}
-								<a href="/Products/{{$product->id}}" class="block2-name dis-block s-text3 p-b-5">detail
+								
+								<a href="/Products/{{$product->id}}" class="block2-name dis-block s-text3 p-b-5">{{$product->name}}
 								</a>
 
 
 								<span class="block2-price m-text6 p-r-5">
-									$75.00
+									Rp. {{ number_format($product->price) }}
 								</span>
 							</div>
 						</div>
 					</div>
-					@endforeach
+					@empty
+					<div class="col-md-12">
+						<div class="container-fluid mr-5">
+							
+							<img src="{{asset('user/images/nothing.png' )}}" alt="" width="250px" height="240px" class="ml-5">
+							<h4 class="text-center">Produk tidak ditemukan</h4>
+							<p>Mohon coba kata kunci yang lain atau yang lebih umum</p>
+					
+						</div>
+					</div>
+					@endforelse
 
 
 
@@ -215,8 +215,9 @@
 
 				<!-- Pagination -->
 				<div class="pagination flex-m flex-w p-t-26">
-					<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-					<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
+					{{ $products->links() }}
+					
+					
 				</div>
 			</div>
 		</div>
