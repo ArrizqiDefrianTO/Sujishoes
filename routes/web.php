@@ -32,3 +32,5 @@ Route::get('login', 'AuthController@getLogin');
 Route::post('login', 'AuthController@postLogin')->name('login');
 Route::get('register', 'AuthController@getRegister');
 Route::post('register', 'AuthController@postRegister')->name('register');
+
+Route::resource('category', 'CategoryController')->except(['create', 'show']);
