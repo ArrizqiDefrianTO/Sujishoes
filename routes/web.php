@@ -19,7 +19,7 @@ Route::get('/product/{slug}', 'Ecommerce\FrontController@show')->name('front.sho
 
 
 
-Route::resource('products', 'ProductController')->except(['show']);
+
 
 Route::resource('about', 'AboutController');
 
@@ -33,3 +33,6 @@ Route::get('login', 'AuthController@getLogin');
 Route::post('login', 'AuthController@postLogin')->name('login');
 Route::get('register', 'AuthController@getRegister');
 Route::post('register', 'AuthController@postRegister')->name('register');
+
+Route::resource('category', 'CategoryController')->except(['create', 'show']);
+Route::resource('product', 'ProductsController')->except(['show']);

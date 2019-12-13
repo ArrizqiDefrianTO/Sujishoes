@@ -26,7 +26,7 @@
 					<h4 class="m-text14 p-b-7">
 						Categories
 					</h4>
-
+					<a href="{{url ('/Products')}}" class="font-weight-bold">All</a>
 					<ul class="list" >
 						@foreach ($categories as $category)
 						<li>

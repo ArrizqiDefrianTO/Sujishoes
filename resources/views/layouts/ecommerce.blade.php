@@ -412,25 +412,25 @@
 
 				<ul>
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Search
+						<a href="{{url ('/')}}" class="s-text7">
+							Home
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							About Us
+						<a href="{{url ('/Products')}}" class="s-text7">
+							Shop Product
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
-							Contact Us
+						<a href="{{url ('/about')}}" class="s-text7">
+							About
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="{{url ('/contact')}}" class="s-text7">
 							Returns
 						</a>
 					</li>
@@ -493,7 +493,7 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="{{ asset ('user/images/icons/paypal.png" alt="IMG-PAYPAL') }}">
+				<img class="h-size2" src="{{ asset ('user/images/icons/paypal.png' ) }}"alt="IMG-PAYPAL'>
 			</a>
 
 			<a href="#">
