@@ -1,126 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<title>Login V13</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset ('login/images/icons/favicon.ico') }}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/bootstrap/css/bootstrap.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/fonts/iconic/css/material-design-iconic-font.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/animate/animate.css') }}">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/css-hamburgers/hamburgers.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/animsition/css/animsition.min.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/select2/select2.min.css') }}">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/vendor/daterangepicker/daterangepicker.css') }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset ('login/css/main.css') }}">
-<!--===============================================================================================-->
-</head>
-<body style="background-color: #999999;">
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="login100-more" style="background-image: url('{{ asset ('login/images/1.jpg') }}');"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.6">
+        <title>Login</title>
 
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
-					<span class="login100-form-title p-b-59">
-						Sign Up
-					</span>
 
-					<div class="wrap-input100 validate-input" data-validate="Name is required">
-						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
-						<span class="focus-input100"></span>
-					</div>
+        <!-- Bootstrap core CSS -->
+        <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
-						<span class="focus-input100"></span>
-					</div>
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+        <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+        <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
 
-					<div class="wrap-input100 validate-input" data-validate="Username is required">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Username...">
-						<span class="focus-input100"></span>
-					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<span class="label-input100">Password</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
+        <style>
+          .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
 
-					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
-						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
-						<span class="focus-input100"></span>
-					</div>
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+        </style>
 
-					<div class="flex-m w-full p-b-33">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								<span class="txt1">
-									I agree to the
-									<a href="#" class="txt2 hov1">
-										Terms of User
-									</a>
-								</span>
-							</label>
-						</div>
+        <!-- Custom styles for this template -->
+        <link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
+    </head>
 
-						
-					</div>
-
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Sign Up
-							</button>
-						</div>
-
-						<a href="#" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-							Sign in
-							<i class="fa fa-long-arrow-right m-l-5"></i>
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/animsition/js/animsition.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/bootstrap/js/popper.js') }}"></script>
-	<script src="{{ asset ('login/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/select2/select2.min.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/daterangepicker/moment.min.js') }}"></script>
-	<script src="{{ asset ('login/vendor/daterangepicker/daterangepicker.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/vendor/countdowntime/countdowntime.js') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset ('login/js/main.js') }}"></script>
-
-</body>
+    <body class="text-center">
+        <div class="container">
+            <form class="form-signin" method="POST" action="{{ route('login2') }}" >
+                  {{ csrf_field() }}
+                  <h1 class="h3 mb-3 font-weight-normal">Login Sujishoes</h1>
+                  <label for="inputUsername" class="sr-only">Username</label>
+                  <input type="username" name="username" id="inputUsername" class="form-control" placeholder="Masukkan Username" required autofocus>
+                  <br>
+                  <label for="inputPassword" class="sr-only">Password</label>
+                  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Masukkan Password" required>
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign</button>
+                 <a href="{{url ('/register')}}" class="badge badge-info">Register</a>
+                 <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+            </form>
+        </div>
+    </body>
 </html>
+ 

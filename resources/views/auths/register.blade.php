@@ -76,7 +76,7 @@
                   @endif
 
                  <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                 <a href="{{url ('/login')}}" class="badge badge-info">Log in</a>
+                 <a href="{{url ('/login2')}}" class="badge badge-info">Log in</a>
                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
             </form>
         </div>
