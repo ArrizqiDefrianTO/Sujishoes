@@ -194,13 +194,13 @@
 
 							<div class="block2-txt p-t-20">
 
-								{{$product->name}}
-								<a href="/Products/{{$product->id}}" class="block2-name dis-block s-text3 p-b-5">detail
+								
+								<a href="/Products/{{$product->id}}" class="block2-name dis-block s-text3 p-b-5">{{$product->name}}
 								</a>
 
 
 								<span class="block2-price m-text6 p-r-5">
-									$75.00
+									Rp. {{$product->price}}
 								</span>
 							</div>
 						</div>

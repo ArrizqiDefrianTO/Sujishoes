@@ -16,14 +16,14 @@
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="images/thumb-item-02.jpg">
+						<div class="item-slick3" data-thumb="{{asset('user/images/'. $product->image )}}">
 							<div class="wrap-pic-w">
                                           
 								<img src="{{asset('user/images/'. $product->image )}}" alt="IMG-PRODUCT">
 							</div>
 						</div>
 
-						<div class="item-slick3" data-thumb="images/thumb-item-03.jpg">
+						<div class="item-slick3" data-thumb="{{asset('user/images/'. $product->image )}}">
 							<div class="wrap-pic-w">
                             <img src="" alt="IMG-PRODUCT">
 							</div>
@@ -38,11 +38,11 @@
 				</h4>
 
 				<span class="m-text17">
-					$22
+					Rp . {{$product->price}}
 				</span>
 
 				<p class="s-text8 p-t-10">
-					Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
+					{{$product->description}}
 				</p>
 
 				<!--  -->
@@ -105,7 +105,7 @@
 
 				<div class="p-b-45">
 					<span class="s-text8 m-r-35">SKU: MUG-01</span>
-					<span class="s-text8">Categories: Mug, Design</span>
+					<span class="s-text8">Categories:{{$product->name}}</span>
 				</div>
 
 				<!--  -->
