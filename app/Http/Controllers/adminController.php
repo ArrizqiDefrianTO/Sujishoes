@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\admin;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use File;
 
 class adminController extends Controller
 {
@@ -36,19 +38,36 @@ class adminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $this->validate($request, [
             'name' => 'required',
             'color_id'  => 'required',
             'category_id' => 'required',
             'description' => 'required',
-            'image' => 'required',
+            'image' => 'required|image|mimes:png,jpg,jpeg',
             'price' => 'required',
             'weight' => 'required'            
         ]);
 
-        admin::create($request->all());
+    if ($request->hasFile('image')){
+        $file = $request->file('image');
+        $filename = time() . Str::slug($request->name) . '.' . $file->getClientOriginalExtension();
+        $file->storeAs('public/products', $filename);
+
+        $products = admin::create([
+            'name' => $request->name,
+            'slug' => $filename,
+            'color_id'  => $request->color_id,
+            'category_id' => $request->category_id,
+            'description' => $request->description,
+            'image' => $filename,
+            'price' => $request->price,
+            'weight' => $request->weight
+            
+        ]);
+
         return redirect('/admin')->with('status', 'Data Barang Berhasil Ditambahkan');
     }
+}
     
 
     /**

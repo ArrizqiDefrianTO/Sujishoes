@@ -28,35 +28,35 @@
     <div class="form-group">
         <label for="nama">Nama Barang</label>
         <input type="text" class="form-control" id="nama"
-        placeholder="Masukkan Nama Barang .." name="nama">
+        placeholder="Masukkan Nama Barang .." name="name">
     </div>
 
     <div class="form-group">
         <label for="color">Warna</label>
         <input type="text" class="form-control" id="color"
-        placeholder="Masukkan Color ID .." name="color">
+        placeholder="Masukkan Color ID .." name="color_id">
     </div>
 
     <div class="form-group">
         <label for="kategori">Kategori</label>
         <input type="text" class="form-control" id="kategori"
-        placeholder="Masukkan Kategori ID" name="kategori">
+        placeholder="Masukkan Kategori ID" name="category_id">
     </div>
 
     <div class="form-group">
         <label for="desc">Deskripsi</label>
         <input type="text" class="form-control" id="desc"
-        placeholder="Masukkan Deskrips ..   " name="desc">
+        placeholder="Masukkan Deskrips ..   " name="description">
     </div>
 
     <div class="form-group">
     <label for="gambar">Gambar</label>
         <div class="custom-file">
-            <input type="file" class="custom-file-input" id="gambar">
+            <input type="file" class="custom-file-input" name="image" id="gambar">
             <label class="custom-file-label" for="gambar" aria-describedby="gambar">Choose file</label>
         </div>
     <div class="input-group-append">
-            <span class="input-group-text" id="gambar">Upload</span>
+            <span class="input-group-text" name='image' id="gambar">Upload</span>
         </div>
         </div>
 
@@ -72,12 +72,12 @@
         placeholder="Masukkan Harga .." name="weight">
     </div>
 
-    </form>
 
     <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
-</form>
+    </form>
+
    
 
 </div>

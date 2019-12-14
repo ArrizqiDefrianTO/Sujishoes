@@ -29,7 +29,7 @@
 					<div class="container">
 						<!-- Search -->
 						<div class="">
-							<form action="" method="post">
+							<form action="" >
 								<div class="row mt-2 ">
 									<div class="form-group col">
 
@@ -79,7 +79,7 @@
 					<div class="col-sm-12 col-md-6 col-lg-4 p-b-50 ">
 						<div class="block2 ">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="user/images/{{$product->image}}" alt="IMG-PRODUCT">
+								<img src="{{asset('user/images/' . $product->image) }}" alt="IMG-PRODUCT">
 
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -104,7 +104,7 @@
 
 
 								<span class="block2-price m-text6 p-r-5">
-									$75.00
+									{{$product->price}}
 								</span>
 							</div>
 						</div>

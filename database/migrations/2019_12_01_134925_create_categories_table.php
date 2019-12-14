@@ -16,7 +16,10 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('color_id');
+            $table->unsignedBigInteger('parent_id')->nullable();
+            // field Parent_id digunakan untuk kategori anak/cabang contoh ada kategori sepatu anak/cabang dari kategori sepatu ada sepatu anak,sepatu running dll 
+            $table->string('slug');
+            // Fungsi dari slug selain untuk memanggil data kita dengan judul, biasa nya bisa juga untuk membuat url kita SEO Friendly , jadi contoh nya kita mengetikkan text input judul nya misal “  cara membuat soto banjar ” ketika kita save maka si slug tadi akan merubah nya menjadi “ cara-membuat-soto-banjar “ yap, dia merubah spasi menjadi “ -  “ kita tidak perlu lagi memanggil artikel kita menggunakan ID cukup dengan SLUG kita tadi saja
             $table->timestamps();
         });
     }
@@ -29,6 +32,5 @@ class CreateCategoriesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('categories');
-
     }
 }
