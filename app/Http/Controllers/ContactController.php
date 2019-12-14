@@ -14,7 +14,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contacts.index');
+        $contacts = Contact::all();
+        return view('contacts.index', compact('contacts'));
     }
 
     /**
@@ -22,17 +23,9 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('contacts.index');
-    }
+    
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -40,11 +33,13 @@ class ContactController extends Controller
             'no_telp' => 'required|size:12',
             'email' => 'required',
             'description' => 'required'
-
+            
         ]);
 
+
+
         Contact::create($request->all());
-        return redirect('/Contacts')->with('status', 'Data Mahasiswa Berhasil Ditambahkan');
+        return redirect('contacts.index')->with('status', 'Terima Kasih');
     }
 
     /**

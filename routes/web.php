@@ -27,12 +27,15 @@ Route::resource('abouts', 'AboutController');
 
 
 // route untuk halaman admin
-Route::resource('contact', 'ContactController');
+Route::post('contact', 'ContactController@store');
+Route::get('contact', 'ContactController@index');
+
 Route::resource('blog', 'blogController');
 
 Route::get('/admin', 'adminController@index');
 Route::get('/admin/create', 'adminController@create');
 Route::post('/admin', 'adminController@store');
+
 
 Route::get('login2', 'AuthController@getLogin');
 Route::post('login2', 'AuthController@postLogin')->name('login2');
