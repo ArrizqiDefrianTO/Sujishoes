@@ -84,12 +84,6 @@
 								<a href="{{url ('/Products')}}">Shop</a>
 							</li>
 
-
-
-
-
-
-
 							<li>
 								<a href="{{url ('/about')}}">About</a>
 							</li>

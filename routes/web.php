@@ -16,3 +16,7 @@ Route::resource('about', 'AboutController');
 Route::resource('Products', 'ProductsController');
 Route::resource('contact', 'ContactController');
 Route::resource('blog', 'blogController');
+
+Route::get('/admin', 'adminController@index');
+Route::get('/admin/create', 'adminController@create');
+Route::post('/admin', 'adminController@store');
