@@ -18,17 +18,18 @@ Route::get('/category/{slug}', 'Ecommerce\FrontController@categoryProduct')->nam
 Route::get('/product/{slug}', 'Ecommerce\FrontController@show')->name('front.show_product');
 Route::resource('contact', 'ContactController');
 
-Route::resource('about', 'AboutController');
+Route::resource('abouts', 'AboutController');
+Route::resource('category', 'CategoryController');
+
 
 
 
 
 // route untuk halaman admin
-
-Route::get('login', 'AuthController@getLogin');
-Route::post('login', 'AuthController@postLogin')->name('login');
+Route::resource('product', 'ProductsController')->except(['show']);
+Route::resource('contact', 'ContactController');
+Route::resource('blog', 'blogController');
+Route::get('login2', 'AuthController@getLogin');
+Route::post('login2', 'AuthController@postLogin')->name('login2');
+Route::post('register', 'AuthController@postRegister');
 Route::get('register', 'AuthController@getRegister');
-Route::post('register', 'AuthController@postRegister')->name('register');
-
-Route::resource('category', 'CategoryController')->except(['create', 'show']);
-Route::resource('productAdmin', 'ProductsController')->except(['show']);

@@ -77,7 +77,7 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="{{url ('/login')}}" class="header-wrapicon1 dis-block">
+					<a href="{{url ('/login2')}}" class="header-wrapicon1 dis-block">
 						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
@@ -493,7 +493,7 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="{{ asset ('user/images/icons/paypal.png' ) }}"alt="IMG-PAYPAL'>
+				<img class="h-size2" src="{{ asset ('user/images/icons/paypal.png' ) }}"alt="IMG-PAYPAL">
 			</a>
 
 			<a href="#">

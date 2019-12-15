@@ -58,42 +58,7 @@
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <!-- LOOPING DATA TERSEBUT MENGGUNAKAN FORELSE -->
-                                        <!-- ADAPUN PENJELASAN ADA PADA ARTIKEL SEBELUMNYA -->
-                                        @forelse ($product as $row)
-                                        <tr>
-                                            <td>
-                                                <!-- TAMPILKAN GAMBAR DARI FOLDER PUBLIC/STORAGE/PRODUCTS -->
-                                                <img src="{{ asset('storage/products/' . $row->image) }}" width="100px" height="100px" alt="{{ $row->name }}">
-                                            </td>
-                                            <td>
-                                                <strong>{{ $row->name }}</strong><br>
-                                                <!-- ADAPUN NAMA KATEGORINYA DIAMBIL DARI HASIL RELASI PRODUK DAN KATEGORI -->
-                                                <label>Kategori: <span class="badge badge-info">{{ $row->category->name }}</span></label><br>
-                                                <label>Berat: <span class="badge badge-info">{{ $row->weight }} gr</span></label>
-                                            </td>
-                                            <td>Rp {{ number_format($row->price) }}</td>
-                                            <td>{{ $row->created_at->format('d-m-Y') }}</td>
-                                            
-                                            <!-- KARENA BERISI HTML MAKA KITA GUNAKAN { !! UNTUK MENCETAK DATA -->
-                                            <td>{!! $row->status_label !!}</td>
-                                            <td>
-                                                <!-- FORM UNTUK MENGHAPUS DATA PRODUK -->
-                                                <form action="{{ route('product.destroy', $row->id) }}" method="post">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <a href="{{ route('category.edit', $row->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                                    <button class="btn btn-danger btn-sm">Hapus</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td colspan="5" class="text-center">Tidak ada data</td>
-                                        </tr>
-                                        @endforelse
-                                    </tbody>
+                                   
                                 </table>
                             </div>
                             <!-- MEMBUAT LINK PAGINASI JIKA ADA -->

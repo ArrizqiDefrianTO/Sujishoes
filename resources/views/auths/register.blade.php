@@ -46,11 +46,11 @@
 
     <body class="text-center">
         <div class="container">
-            <form class="form-signin" method="POST" action="{{ route('register') }}">
-                  {{ csrf_field() }}
+            <form class="form-signin" method="post" action="">
+              @csrf
                   <h1 class="h3 mb-3 font-weight-normal">Register Sujishoes</h1>
                   <label for="inputUsername" class="sr-only">Username</label>
-                  <input type="username" name="username" id="inputUsername" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" placeholder="Masukkan Username" value="{{old('name')}}" required autofocus>
+                  <input type="username" name="username" id="inputUsername" class="form-control {{ $errors->has('usesrname') ? 'is-invalid' : '' }}" placeholder="Masukkan Username" value="{{old('username')}}" required autofocus>
                   <br>
                   @if($errors->has('name'))
                       <div class="invalid-feedback">
@@ -61,7 +61,7 @@
                   <label for="inputPassword" class="sr-only">Password</label>
                   <input type="password" name="password" id="inputPassword" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" placeholder="Masukkan Password" required>
                   <br>
-                  @if($errors->has('password'))
+                  {{-- @if($errors->has('password'))
                       <div class="invalid-feedback">
                         {{ $errors->first('password') }}
                       </div>
@@ -73,10 +73,10 @@
                       <div class="invalid-feedback">
                         {{ $errors->first('password_confirmation') }}
                       </div>
-                  @endif
+                  @endif --}}
 
                  <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                 <a href="{{url ('/login')}}" class="badge badge-info">Log in</a>
+                 <a href="{{url ('/login2')}}" class="badge badge-info">Log in</a>
                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
             </form>
         </div>
