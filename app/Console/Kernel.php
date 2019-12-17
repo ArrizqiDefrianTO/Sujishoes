@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        'customer' => \App\Http\Middleware\CustomerAuthenticate::class,
     ];
 
     /**

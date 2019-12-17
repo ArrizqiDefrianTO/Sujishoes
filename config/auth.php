@@ -71,6 +71,11 @@ return [
             'model' => App\User::class,
         ],
 
+    'customers' => [
+            'driver' => 'eloquent',
+            'model' => App\Customer::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -99,5 +104,7 @@ return [
             'expire' => 60,
         ],
     ],
+
+    'password_timeout' => 10800,
 
 ];

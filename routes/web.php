@@ -38,14 +38,30 @@ Route::resource('category', 'CategoryController');
 // Route::post('contact', 'ContactController@store');
 // Route::get('contact', 'ContactController@index');
 
-Route::resource('blog', 'blogController');
+// member verification email
+Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
+    Route::get('verify/{token}', 'FrontController@verifyCustomerRegistration')->name('customer.verify');
+});
 
-Route::get('/admin', 'adminController@index');
-Route::get('/admin/create', 'adminController@create');
-Route::post('/admin', 'adminController@store');
+// login form
+Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
+    Route::get('login', 'LoginController@loginForm')->name('customer.login'); //TAMBAHKAN ROUTE INI
+    Route::get('verify/{token}', 'FrontController@verifyCustomerRegistration')->name('customer.verify');
+});
 
+Route::post('login', 'LoginController@login')->name('customer.post_login');
 
-Route::get('login2', 'AuthController@getLogin');
-Route::post('login2', 'AuthController@postLogin')->name('login2');
-Route::post('register', 'AuthController@postRegister');
-Route::get('register', 'AuthController@getRegister');
+// customer dashboard
+Route::group(['middleware' => 'customer'], function() {
+    Route::get('dashboard', 'LoginController@dashboard')->name('customer.dashboard');
+});
+
+// middleware login
+Route::group(['middleware' => 'customer'], function() {
+    Route::get('dashboard', 'LoginController@dashboard')->name('customer.dashboard');
+    Route::get('logout', 'LoginController@logout')->name('customer.logout'); //TAMBAHKAN BARIS INI
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

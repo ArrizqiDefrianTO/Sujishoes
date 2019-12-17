@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Ecommerce;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+use App\Mail\CustomerRegisterMail;
+use Mail;
 
 class CartController extends Controller
 {
@@ -74,5 +76,28 @@ class CartController extends Controller
         $cookie = cookie('dw-carts', json_encode($carts), 2880);
         //DAN STORE KE BROWSER.
         return redirect()->back()->cookie($cookie);
+    }
+
+    public function processCheckout()
+    {
+        $password = Str::random(8); //TAMBAHKAN LINE INI
+        $customer = Customer::create([
+            'name' => $request->customer_name,
+            'email' => $request->email,
+            'password' => $password, //TAMBAHKAN LINE INI
+            'phone_number' => $request->customer_phone,
+            'address' => $request->customer_address,
+            'district_id' => $request->district_id,
+            'activate_token' => Str::random(30), //TAMBAKAN LINE INI
+            'status' => false
+        ]);
+
+        DB::commit();
+
+        $carts = [];
+        $cookie = cookie('dw-carts', json_encode($carts), 2880);
+
+        Mail::to($request->email)->send(new CustomerRegisterMail($customer, $password)); //TAMBAHKAN CODE INI SAJA 
+        return redirect(route('front.finish_checkout', $order->invoice))->cookie($cookie);
     }
 }

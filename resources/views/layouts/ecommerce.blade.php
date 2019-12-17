@@ -78,7 +78,17 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="{{url ('/login2')}}" class="header-wrapicon1 dis-block">
+
+					@if (auth()->guard('customer')->check())
+						
+					    <a href="{{ route('customer.logout') }}" class="header-wrapicon1 dis-block">
+					    	<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
+					    </a>
+					  @else
+					    <a href="{{ route('customer.login') }}" class="header-wrapicon1 dis-block">Login</a>
+					 @endif
+
+					<a href="{{route ('customer.login')}}"  class="header-wrapicon1 dis-block">
 						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
