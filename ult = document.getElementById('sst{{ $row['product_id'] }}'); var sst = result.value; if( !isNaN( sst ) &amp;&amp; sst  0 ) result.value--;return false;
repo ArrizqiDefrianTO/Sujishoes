@@ -1,0 +1,236 @@
+[33mcommit ff2c48aa3b21d01b440a4fff6f198b8d8b3245be[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: a7401b1 2ff03a6
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Sun Dec 15 18:55:35 2019 +0700
+
+    perbaikan fungsi upload productAdmin
+
+[33mcommit a7401b1d40642e8536ddf32685d6da1f7a49e340[m
+Merge: ac67a85 112c375
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Fri Dec 13 23:22:54 2019 +0700
+
+    membuat fungsi upload
+
+[33mcommit 2ff03a6cd646e89d55b867ad9646e56c05bd4b54[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Fri Dec 13 23:20:36 2019 +0700
+
+    Membuat fungsi register
+
+[33mcommit ac67a8563d2b8f28437f8ae8235ce032065f9197[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Fri Dec 13 21:44:20 2019 +0700
+
+    fungsi upload produt
+
+[33mcommit 112c375a94733a48c30540cfbff40777cc94ab39[m
+Merge: f46b634 7f007d3
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Fri Dec 13 21:35:10 2019 +0700
+
+    Menangani error saat git pull
+
+[33mcommit f46b6349f0f3ffa9ab0c9f2387b2f43e57617c2d[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Fri Dec 13 21:32:47 2019 +0700
+
+    Menangani error saat git pull
+
+[33mcommit 7f007d31d5ef8f223924b38e3529c031f875b680[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Fri Dec 13 16:21:57 2019 +0700
+
+    fungsi filter product tampilan user
+
+[33mcommit 267bfde18dcc4a2421bee68e62fdf8291c96e219[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Fri Dec 13 11:35:47 2019 +0700
+
+    fungsi Create,update,delete Category-Admin
+
+[33mcommit 0e21ae34494861943f204f45e80a9d3f57282725[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Fri Dec 13 10:07:19 2019 +0700
+
+    perubahan table migrasi products,categories, dan menambahkan migrasi baru table color
+
+[33mcommit 2d543b4a6d9b1faad54377f435b8c3b8d6c213a5[m
+Merge: 2e10771 9f59a60
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 11 00:15:01 2019 +0700
+
+    combine conflik
+
+[33mcommit 2e1077192e9177c65813fa132b0e7ecabfaf9757[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 11 00:07:34 2019 +0700
+
+    fungsi detail product v2
+
+[33mcommit 9f59a600a418ce1618cec3a1fc1a1216f387a28e[m
+Merge: c242d56 2e66396
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Tue Dec 10 21:23:45 2019 +0700
+
+    Merge branch 'master' of https://github.com/ahmadmaulana730/Sujishoes
+
+[33mcommit c242d5604fece535ef52799a586ae99c26d3b308[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Tue Dec 10 21:23:24 2019 +0700
+
+    Membuat tampilan login dan register
+
+[33mcommit 918b185d8da5d0104e0f438177877a6eb11cc995[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Tue Dec 10 21:21:26 2019 +0700
+
+    Membuat tampilan login dan register
+
+[33mcommit 2e663964a8bad4498f58032671e0029382f7b7bd[m
+Merge: 112dd11 a48818f
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Tue Dec 10 20:03:40 2019 +0700
+
+    fungsi menampilkan detail barang
+
+[33mcommit a48818f0bff4c21f5a8f3f6730b471d7f6be4533[m
+Merge: b4f5c00 a150dd1
+Author: Agung Alfarisy <agungalfarisy@gmail.com>
+Date:   Tue Dec 10 19:43:44 2019 +0700
+
+    Konfigurasi Asset
+
+[33mcommit b4f5c006cb4d2684078b92a273bb4f3d5a32372d[m
+Author: Agung Alfarisy <agungalfarisy@gmail.com>
+Date:   Tue Dec 10 17:41:58 2019 +0700
+
+    konfigurasi asset
+
+[33mcommit 112dd11c4e9b61c6daad73da95afe2b3d18a687e[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Tue Dec 10 00:55:26 2019 +0700
+
+    tes
+
+[33mcommit a150dd1b106b02483c65be7af5e12dd0f349cf07[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Tue Dec 10 00:52:37 2019 +0700
+
+    Mengganti nama file productsTableSedder menjadi ProductsTableSeeder dan sedding datanya
+
+[33mcommit 8379d0f82c0d08dc7362ac1b76a5d2359222d78d[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Sat Dec 7 17:29:57 2019 +0700
+
+    menampilkan gambar product dari database
+
+[33mcommit 3a90a039e580b79365d806d6cc8ccf9c76054771[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Sat Dec 7 16:22:58 2019 +0700
+
+    menghapus fungsi blog di project
+
+[33mcommit 5c93fdb29695b44acf979cd16fb240fcb566e9bc[m
+Merge: 41856f3 ccacdd4
+Author: Agung Alfarisy <agungalfarisy@gmail.com>
+Date:   Sat Dec 7 16:14:56 2019 +0700
+
+    Mengisi tabel cities, district, dan produk
+
+[33mcommit 41856f3e3246881b1df6baba4bc6986961d3c8a6[m
+Author: Agung Alfarisy <agungalfarisy@gmail.com>
+Date:   Sat Dec 7 16:07:55 2019 +0700
+
+    Mengisi tabel cities, district, dan produk
+
+[33mcommit ccacdd4e74aa6711c1fd1cce2fc9cbaac6b50d1b[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Sat Dec 7 15:36:53 2019 +0700
+
+    Menambahkan tabel colors dan mengisi data tabel dari categories dan color menggunakan sedding data
+
+[33mcommit 754313e652ff5fcf84d75e76de7fbc9d65913290[m
+Merge: 18db59f e922e81
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Sat Dec 7 03:19:18 2019 +0700
+
+    Merge branch 'master' of https://github.com/ahmadmaulana730/Sujishoes
+
+[33mcommit 18db59fe512f898fd6fb91cb0c9a51f799a4a37c[m[33m ([m[1;32mTesAhmad[m[33m)[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Sat Dec 7 03:04:46 2019 +0700
+
+    menampilkan data products
+
+[33mcommit e922e81cf9b8e6c97ab1cde9a8d6f74cc466055a[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Thu Dec 5 14:01:07 2019 +0700
+
+    Menghubungkan ke database sujishoes dan melakukan migration
+
+[33mcommit ba8c7d6184692771f4e7c9eb61fc7f9baa401f6a[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 4 20:50:09 2019 +0700
+
+    tampilan untuk user
+
+[33mcommit 0973fe850051968b1c0b7cbf5f19b458580c894c[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 4 18:23:48 2019 +0700
+
+    tampilan halaman utama
+
+[33mcommit b5bebe46bbead1f69532de6bba32e02cc69bb5ac[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 4 15:18:44 2019 +0700
+
+    perubahan dari CI menjadi Laravel
+
+[33mcommit 3f348e112c2d5d20082d58fc15e0445147982597[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Wed Dec 4 15:12:14 2019 +0700
+
+    Tes ahmad
+
+[33mcommit 27edabf9c61923ae6d918724d8e1ab25f09c4671[m
+Author: Agung Alfarisy <agungalfarisy@gmail.com>
+Date:   Tue Dec 3 18:25:08 2019 +0700
+
+    tes Agung
+
+[33mcommit b9215531902e957cc10ff04a623c17e3a8ee52a7[m
+Author: Amanda Shakila <amanda_173040063@mail.unpas.ac.id>
+Date:   Tue Dec 3 18:04:39 2019 +0700
+
+    Tes amanda
+
+[33mcommit 92679a371d35b7754847ddaf3323a4caf9adc489[m
+Author: Your Name <amkomarudin7@gmail.com>
+Date:   Tue Dec 3 17:06:40 2019 +0700
+
+    tes
+
+[33mcommit db02a4e43833da56bd9a52ad3898057f74c89f51[m
+Author: ahmadmaulana730 <amkomarudin7@gmail.com>
+Date:   Tue Nov 26 11:35:59 2019 +0700
+
+    Plan Awal
+
+[33mcommit f7687673c3639964dd0f2ccd3b5b8d02302c51f5[m
+Author: ahmadmaulana730 <amkomarudin7@gmail.com>
+Date:   Thu Nov 21 03:28:54 2019 +0700
+
+    Perubahan controller
+
+[33mcommit 53f80ed1c696a40c1d41abb82d4fdba7b4058a42[m
+Author: ahmadmaulana730 <amkomarudin7@gmail.com>
+Date:   Thu Nov 21 03:27:42 2019 +0700
+
+    penataan folder dan pembuatan controller
+
+[33mcommit ba1c0a8edb4aba12b97cb549b14578a816e4a82a[m
+Author: ahmadmaulana730 <amkomarudin7@gmail.com>
+Date:   Thu Nov 21 02:18:01 2019 +0700
+
+    konfigurasi routes dan database

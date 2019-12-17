@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{ asset ('user/images/icons/favicon.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset ('user/images/logoo new tab.png') }}">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/bootstrap/css/bootstrap.min.css') }}">
 	<!--===============================================================================================-->

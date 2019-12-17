@@ -40,7 +40,7 @@ class CartController extends Controller
         //JANGAN LUPA UNTUK DI-ENCODE KEMBALI, DAN LIMITNYA 2800 MENIT ATAU 48 JAM
         $cookie = cookie('dw-carts', json_encode($carts), 2880);
         //STORE KE BROWSER UNTUK DISIMPAN
-        return redirect()->back()->cookie($cookie)->with(['success' => 'Produk Baru Ditambahkan']);
+        return redirect()->back()->cookie($cookie)->with(['success' => 'Produk Baru Ditambahkan,Silahkan Lanjutkan KeProses Transaksi Di keranjang']);
     }
     public function listCart()
     {
