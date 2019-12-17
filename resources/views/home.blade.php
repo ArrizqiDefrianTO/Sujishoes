@@ -1,329 +1,63 @@
-@extends('layouts.ecommerce')
-@section('title','Sujishoes')
+<!-- FUNGSI EXTENDS DIGUNAKAN UNTUK ME-LOAD MASTER LAYOUTS YANG ADA, KARENA INI ADALAH HALAMAN HOME MAKA KITA ME-LOAD LAYOUTS ADMIN.BLADE.PHP -->
+<!-- KETIKA MELOAD FILE BLADE, MAKA EKSTENSI .BLADE.PHP TIDAK PERLU DITULISKAN -->
+@extends('layouts.admin')
+
+<!-- TAG YANG DIAPIT OLEH SECTION('TITLE') AKAN ME-REPLACE @YIELD('TITLE') PADA MASTER LAYOUTS -->
+@section('title')
+    <title>Dashboard</title>
+@endsection
+
+<!-- TAG YANG DIAPIT OLEH SECTION('CONTENT') AKAN ME-REPLACE @YIELD('CONTENT') PADA MASTER LAYOUTS -->
 @section('content')
-
-
-<section class="slide1">
-    <div class="wrap-slick1">
-        <div class="slick1">
-            <div class="item-slick1 item1-slick1" style="background-image: url(user/images/banner4.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-                        Women Collection 2018
-                    </span>
-
-
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-                        <!-- Button -->
-                        <a href="{{url ('/Products')}}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item2-slick1" style="background-image: url(user/images/salomon.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-                        Women Collection 2018
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-                        <!-- Button -->
-                        <a href="{{url ('/Products')}}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-slick1 item3-slick1" style="background-image: url(user/images/salomon2.jpg);">
-                <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-                    <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-                        Women Collection 2018
-                    </span>
-
-                    <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-                        New arrivals
-                    </h2>
-
-                    <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
-                        <!-- Button -->
-                        <a href="{{url ('/Products')}}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                            Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- content product -->
-<section class="newproduct bgwhite p-t-45 p-b-105">
-    <div class="container">
-        <div class="sec-title p-b-60">
-            <h3 class="m-text5 t-center">
-                Featured Products
-            </h3>
-        </div>
-
-        <!-- Slide2 -->
-
-        <div class="row mt-3">
-            <!-- Block2 -->
-            @foreach($products as $product)
-            <div class="col-sm-12 col-md-6 col-lg-4 p-b-50 ">
-                <div class="block2 ">
-                    <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                        <img src="{{ asset('storage/products/' . $product->image)}}" alt="IMG-PRODUCT">
-
-                        <div class="block2-overlay trans-0-4">
-                            <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                                <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                                <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                            </a>
-
-                            <div class="block2-btn-addcart w-size1 trans-0-4">
-                                <!-- Button -->
-                                
-										<a href="{{ url('/Products/' . $product->slug) }}" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart</a>
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Aktivitas Toko</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="callout callout-info">
+                                        <small class="text-muted">Omset Harian</small>
+                                        <br>
+                                        <strong class="h4">Rp 0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-danger">
+                                        <small class="text-muted">Pelanggan Baru (H-7)</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-primary">
+                                        <small class="text-muted">Perlu Dikirim</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="callout callout-success">
+                                        <small class="text-muted">Total Produk</small>
+                                        <br>
+                                        <strong class="h4">0</strong>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="block2-txt p-t-20">
-
-                        
-                        <a href="/Products/{{$product->id}}" class="block2-name dis-block s-text3 p-b-5">{{$product->name}}
-                        </a>
-
-
-                        <span class="block2-price m-text6 p-r-5">
-                            Rp. {{ number_format($product->price) }}
-                        </span>
-                    </div>
                 </div>
             </div>
-            @endforeach
-
-
-
-
-
-        </div>
-        
-
-    </div>
-</section>
-<!-- endcontent product -->
-
-
-
-<!-- Blog -->
-<section class="blog bgwhite p-t-94 p-b-65">
-    <div class="container">
-        <div class="sec-title p-b-52">
-            <h3 class="m-text5 t-center">
-                Our Blog
-            </h3>
-        </div>
-
-        <div class="row">
-            @foreach($products as $product)
-            <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
-                <!-- Block3 -->
-                
-                <div class="block3">
-                    <a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-                        <img src="user/images/berita/cover_1.jfif" alt="IMG-BLOG">
-                    </a>
-
-                    <div class="block3-txt p-t-14">
-                        <h4 class="p-b-7">
-                            <a href="blog-detail.html" class="m-text11">
-                                {{$product->name}}
-                            </a>
-                        </h4>
-
-                        <span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
-                        <span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
-
-                        <p class="s-text8 p-t-16">
-                            Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id
-                            euismod. Inter-dum et malesuada fames
-                        </p>
-                    </div>
-                </div>
-            </div>
-          
-            @endforeach
-           
-        </div>
-        <div class="row">
-          
         </div>
     </div>
-</section>
-<!-- endblog -->
-<section class="instagram p-t-20">
-    <div class="sec-title p-b-52 p-l-15 p-r-15">
-        <h3 class="m-text5 t-center">
-            @ follow us on Instagram
-        </h3>
-    </div>
-
-    <div class="flex-w">
-        <!-- Block4 -->
-        <div class="block4 wrap-pic-w">
-            <img src="user/images/ig1.webp" alt="IMG-INSTAGRAM">
-
-            <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-                <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-                    <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-                    <span class="p-t-2">39</span>
-                </span>
-
-                <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-                    <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla
-                        in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                        metus elit.
-                    </p>
-
-                    <span class="s-text9">
-                        Photo by @nancyward
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Block4 -->
-        <div class="block4 wrap-pic-w">
-            <img src="user/images/ig2.jpg" alt="IMG-INSTAGRAM">
-
-            <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-                <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-                    <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-                    <span class="p-t-2">39</span>
-                </span>
-
-                <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-                    <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla
-                        in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                        metus elit.
-                    </p>
-
-                    <span class="s-text9">
-                        Photo by @nancyward
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Block4 -->
-        <div class="block4 wrap-pic-w">
-            <img src="user/images/ig3.jpg" alt="IMG-INSTAGRAM">
-
-            <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-                <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-                    <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-                    <span class="p-t-2">39</span>
-                </span>
-
-                <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-                    <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla
-                        in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                        metus elit.
-                    </p>
-
-                    <span class="s-text9">
-                        Photo by @nancyward
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Block4 -->
-        <div class="block4 wrap-pic-w">
-            <img src="user/images/ig4.jpg" alt="IMG-INSTAGRAM">
-
-            <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-                <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-                    <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-                    <span class="p-t-2">39</span>
-                </span>
-
-                <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-                    <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla
-                        in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                        metus elit.
-                    </p>
-
-                    <span class="s-text9">
-                        Photo by @nancyward
-                    </span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Block4 -->
-        <div class="block4 wrap-pic-w">
-            <img src="user/images/ig5.webp" alt="IMG-INSTAGRAM">
-
-            <a href="#" class="block4-overlay sizefull ab-t-l trans-0-4">
-                <span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-                    <i class="icon_heart_alt fs-20 p-r-12" aria-hidden="true"></i>
-                    <span class="p-t-2">39</span>
-                </span>
-
-                <div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-                    <p class="s-text10 m-b-15 h-size1 of-hidden">
-                        Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu viverra ex nulla
-                        in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
-                        metus elit.
-                    </p>
-
-                    <span class="s-text9">
-                        Photo by @nancyward
-                    </span>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-<!-- Back to top -->
-<div class="btn-back-to-top bg0-hov" id="myBtn">
-    <span class="symbol-btn-back-to-top">
-        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-    </span>
-</div>
-
-<!-- Container Selection1 -->
-<div id="dropDownSelect1"></div>
-
-
-
-
+</main>
 @endsection
