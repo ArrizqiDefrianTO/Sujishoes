@@ -18,6 +18,27 @@ class FrontController extends Controller
         return view('home', compact('products'));
     }
 
+    // public function show($id)
+    // {
+    //     return view('shops.detail', ['product' => Product::findOrFail($id)]);
+    // }
+
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  *
+    //  * @param  \App\PagesModel  $pagesModel
+    //  * @return \Illuminate\Http\Response
+    //  */
+
+
+    public function show($slug)
+    {
+        //QUERY UNTUK MENGAMBIL SINGLE DATA BERDASARKAN SLUG-NYA
+        $product = Product::with(['category'])->where('slug', $slug)->first();
+        //LOAD VIEW SHOW.BLADE.PHP DAN PASSING DATA PRODUCT
+        return view('shops.show', compact('product'));
+    }
+
     public function product()
     {
         //BUAT QUERY UNTUK MENGAMBIL DATA PRODUK, LOAD PER PAGENYA KITA GUNAKAN 12 AGAR PRESISI PADA HALAMAN TERSEBUT KARENA DALAM SEBARIS MEMUAT 4 BUAH PRODUK

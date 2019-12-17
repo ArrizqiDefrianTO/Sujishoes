@@ -13,16 +13,22 @@ class ProductsController extends Controller
 {
     public function index()
     {
-
-
+        //BUAT QUERY MENGGUNAKAN MODEL PRODUCT, DENGAN MENGURUTKAN DATA BERDASARKAN CREATED_AT
+        //KEMUDIAN LOAD TABLE YANG BERELASI MENGGUNAKAN EAGER LOADING WITH()
+        //ADAPUN CATEGORY ADALAH NAMA FUNGSI YANG NNTINYA AKAN DITAMBAHKAN PADA PRODUCT MODEL
         $product = Product::with(['category'])->orderBy('created_at', 'DESC');
+
+        //JIKA TERDAPAT PARAMETER PENCARIAN DI URL ATAU Q PADA URL TIDAK SAMA DENGAN KOSONG
         if (request()->q != '') {
+            //MAKA LAKUKAN FILTERING DATA BERDASARKAN NAME DAN VALUENYA SESUAI DENGAN PENCARIAN YANG DILAKUKAN USER
             $product = $product->where('name', 'LIKE', '%' . request()->q . '%');
         }
+        //TERAKHIR LOAD 10 DATA PER HALAMANNYA
         $product = $product->paginate(10);
+        //LOAD VIEW INDEX.BLADE.PHP YANG BERADA DIDALAM FOLDER PRODUCTS
+        //DAN PASSING VARIABLE $PRODUCT KE VIEW AGAR DAPAT DIGUNAKAN
         return view('products.index', compact('product'));
     }
-
     public function create()
     {
         $category = Category::orderBy('name', 'DESC')->get();
@@ -52,9 +58,11 @@ class ProductsController extends Controller
                 'description' => $request->description,
                 'image' => $filename,
                 'price' => $request->price,
-                'weight' => $request->weight,
-                'status' => $request->status
+                'weight' => $request->weight
+
             ]);
+
+
             return redirect(route('product.index'))->with(['success' => 'Produk Baru Ditambahkan']);
         }
     }
@@ -99,9 +107,12 @@ class ProductsController extends Controller
 
     public function destroy($id)
     {
-        $product = Product::find($id);
+        $product = Product::find($id); //QUERY UNTUK MENGAMBIL DATA PRODUK BERDASARKAN ID
+        //HAPUS FILE IMAGE DARI STORAGE PATH DIIKUTI DENGNA NAMA IMAGE YANG DIAMBIL DARI DATABASE
         File::delete(storage_path('app/public/products/' . $product->image));
+        //KEMUDIAN HAPUS DATA PRODUK DARI DATABASE
         $product->delete();
+        //DAN REDIRECT KE HALAMAN LIST PRODUK
         return redirect(route('product.index'))->with(['success' => 'Produk Sudah Dihapus']);
     }
 }

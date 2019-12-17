@@ -86,7 +86,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4 p-b-50 ">
                 <div class="block2 ">
                     <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-                        <img src="user/images/{{$product->image}}" alt="IMG-PRODUCT">
+                        <img src="{{ asset('storage/products/' . $product->image)}}" alt="IMG-PRODUCT">
 
                         <div class="block2-overlay trans-0-4">
                             <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -96,9 +96,9 @@
 
                             <div class="block2-btn-addcart w-size1 trans-0-4">
                                 <!-- Button -->
-                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                    Add to Cart
-                                </button>
+                                
+										<a href="{{ url('/Products/' . $product->slug) }}" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+											Add to Cart</a>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
 
 
                         <span class="block2-price m-text6 p-r-5">
-                            Rp. {{$product->price}}
+                            Rp. {{ number_format($product->price) }}
                         </span>
                     </div>
                 </div>

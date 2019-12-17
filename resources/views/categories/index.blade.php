@@ -26,6 +26,7 @@
                                     <input type="text" name="name" class="form-control" required>
                                     <p class="text-danger">{{ $errors->first('name') }}</p>
                                 </div>
+                                    
                                 <div class="form-group">
                                     <label for="parent_id">Kategori Induk </label>
                                     <select name="parent_id" class="form-control">
