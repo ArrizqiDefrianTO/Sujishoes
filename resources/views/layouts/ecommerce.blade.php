@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{{ asset ('user/images/logoo new tab.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset ('user/images/icons/favicon.png') }}">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset ('user/vendor/bootstrap/css/bootstrap.min.css') }}">
 	<!--===============================================================================================-->
@@ -78,7 +78,7 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="{{url ('/login2')}}" class="header-wrapicon1 dis-block">
+					<a href="{{url ('/login')}}" class="header-wrapicon1 dis-block">
 						<img src="{{ asset ('user/images/icons/icon-header-01.png') }}" class="header-icon1" alt="ICON">
 					</a>
 
@@ -339,7 +339,9 @@
 
 	<!--===============================================================================================-->
 	<script src="{{ asset ('user/js/main.js') }}"></script>
+	<script src="{{ asset('ecommerce/js/theme.js') }}"></script>
 
+	@yield('js')
 </body>
 
 </html>
