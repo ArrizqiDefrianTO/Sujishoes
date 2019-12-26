@@ -13,12 +13,21 @@
                         <h1>Login</h1>
                         <p class="text-muted">Sign In to your account</p>
 
+<<<<<<< HEAD
                         <!-- ACTIONNYA MENGARAH PADA URL /LOGIN -->
                         <!-- UNTUK MENCARI TAU TUJUAN URI DARI ROUTE NAME DIBAWAH, PADA COMMAND LINE, KETIKKAN PHP ARTISAN ROUTE:LIST DAN CARI URI YANG MENGGUNAKAN METHOD POST -->
                         <!-- KARENA URI /LOGIN DENGAN METHOD GET DIGUNAKAN UNTUK ME-LOAD VIEW HALAMAN LOGIN -->
                         <!-- PENGGUNAAN ROUTE() APABILA ROUTING TERSEBUT MEMILIKI NAMA, ADAPUN NAMENYA ADA PADA COLOM NAME ROUTE:LIST -->
                         <!-- JIKA ROUTINGNYA TIDAK MEMILIKI NAMA, MAKA GUNAKAN HELPER URL() DAN DIDALAMNYA ADALAH URINYA. CONTOH URL('/LOGIN') -->
                         <form action="{{ route('customer.post_login') }}" method="post" id="contactForm" novalidate="novalidate">
+=======
+                      	<!-- ACTIONNYA MENGARAH PADA URL /LOGIN -->
+                      	<!-- UNTUK MENCARI TAU TUJUAN URI DARI ROUTE NAME DIBAWAH, PADA COMMAND LINE, KETIKKAN PHP ARTISAN ROUTE:LIST DAN CARI URI YANG MENGGUNAKAN METHOD POST -->
+                      	<!-- KARENA URI /LOGIN DENGAN METHOD GET DIGUNAKAN UNTUK ME-LOAD VIEW HALAMAN LOGIN -->
+                      	<!-- PENGGUNAAN ROUTE() APABILA ROUTING TERSEBUT MEMILIKI NAMA, ADAPUN NAMENYA ADA PADA COLOM NAME ROUTE:LIST -->
+                      	<!-- JIKA ROUTINGNYA TIDAK MEMILIKI NAMA, MAKA GUNAKAN HELPER URL() DAN DIDALAMNYA ADALAH URINYA. CONTOH URL('/LOGIN') -->
+                        <form action="{{ route('login') }}" method="post">
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b
                             @csrf
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -27,7 +36,11 @@
                                     </span>
                                 </div>
                               
+<<<<<<< HEAD
                                 <!-- $errors->has('email') AKAN MENGECEK JIKA ADA ERROR DARI HASIL VALIDASI LARAVEL, SEMUA KEGAGALAN VALIDASI LARAVEL AKAN DISIMPAN KEDALAM VARIABLE $errors -->
+=======
+                              	<!-- $errors->has('email') AKAN MENGECEK JIKA ADA ERROR DARI HASIL VALIDASI LARAVEL, SEMUA KEGAGALAN VALIDASI LARAVEL AKAN DISIMPAN KEDALAM VARIABLE $errors -->
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b
                                 <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                                     type="text" 
                                     name="email"
@@ -63,9 +76,12 @@
                                 <div class="col-6 text-right">
                                     <button class="btn btn-link px-0" type="button">Forgot password?</button>
                                 </div>
+<<<<<<< HEAD
                                    <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
+=======
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b
                             </div>
                         </form>
                     </div>

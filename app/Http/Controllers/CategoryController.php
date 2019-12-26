@@ -2,17 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Str;
-use App\Category;
 use Illuminate\Http\Request;
+use App\Category; //LOAD MODEL CATEGORY
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //BUAT QUERY KE DATABASE MENGGUNAKAN MODEL CATEGORY DENGAN MENGURUTKAN BERDASARKAN CREATED_AT DAN DISET DESCENDING, KEMUDIAN PAGINATE(10) BERARTI HANYA ME-LOAD 10 DATA PER PAGENYA
@@ -32,59 +26,30 @@ class CategoryController extends Controller
         return view('categories.index', compact('category', 'parent'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    //METHOD LAINNYA DISINI JIKA ADA
     public function store(Request $request)
     {
-        //JADI KITA VALIDASI DATA YANG DITERIMA, DIMANA NAME CATEGORY  WAJIB DIISI 'REQUIRED'
+        //JADI KITA VALIDASI DATA YANG DITERIMA, DIMANA NAME CATEGORY WAJIB DIISI
         //TIPENYA ADA STRING DAN MAX KARATERNYA ADALAH 50 DAN BERSIFAT UNIK
         //UNIK MAKSUDNYA JIKA DATA DENGAN NAMA YANG SAMA SUDAH ADA MAKA VALIDASINYA AKAN MENGEMBALIKAN ERROR
         $this->validate($request, [
             'name' => 'required|string|max:50|unique:categories'
         ]);
 
-        //FIELD slug AKAN DITAMBAHKAN KEDALAM COLLECTION $REQUEST DIMANA FUNGSI INI MENGAMBIL DATA YANG DIINPUTKAN DI FORM ISIAN
+        //FIELD slug AKAN DITAMBAHKAN KEDALAM COLLECTION $REQUEST
         $request->request->add(['slug' => $request->name]);
-        // SETELAH SELASAI PENGECEKAN VALIDASI KIRIM DATA KE DATABASE
-        Category::create($request->all());
 
+        //SEHINGGA PADA BAGIAN INI KITA TINGGAL MENGGUNAKAN $request->except()
+        //YAKNI MENGGUNAKAN SEMUA DATA YANG ADA DIDALAM $REQUEST KECUALI INDEX _TOKEN
+        //FUNGSI REQUEST INI SECARA OTOMATIS AKAN MENJADI ARRAY
+        //CATEGORY::CREATE ADALAH MASS ASSIGNMENT UNTUK MEMBERIKAN INSTRUKSI KE MODEL AGAR MENAMBAHKAN DATA KE TABLE TERKAIT
+        Category::create($request->except('_token'));
         //APABILA BERHASIL, MAKA REDIRECT KE HALAMAN LIST KATEGORI
         //DAN MEMBUAT FLASH SESSION MENGGUNAKAN WITH()
         //JADI WITH() DISINI BERBEDA FUNGSINYA DENGAN WITH() YANG DISAMBUNGKAN DENGAN MODEL
         return redirect(route('category.index'))->with(['success' => 'Kategori Baru Ditambahkan!']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $category = Category::find($id); //QUERY MENGAMBIL DATA BERDASARKAN ID
@@ -95,13 +60,6 @@ class CategoryController extends Controller
         return view('categories.edit', compact('category', 'parent'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //VALIDASI FIELD NAME
@@ -126,39 +84,20 @@ class CategoryController extends Controller
         return redirect(route('category.index'))->with(['success' => 'Kategori Diperbaharui!']);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //Buat query untuk mengambil category berdasarkan id menggunakan method find()
         //ADAPUN withCount() SERUPA DENGAN EAGER LOADING YANG MENGGUNAKAN with()
         //HANYA SAJA withCount() RETURNNYA ADALAH INTEGER
         //JADI NNTI HASIL QUERYNYA AKAN MENAMBAHKAN FIELD BARU BERNAMA child_count YANG BERISI JUMLAH DATA ANAK KATEGORI
-        $category = Category::withCount(['child'])->find($id);
-        //JIKA KATEGORI INI TIDAK DIGUNAKAN SEBAGAI PARENT ATAU CHILDNYA = 0
-        if ($category->child_count == 0) {
-            //MAKA HAPUS KATEGORI INI
+        //TAMBAHKAN product KEDALAM ARRAY WITHCOUNT()
+        //FUNGSI INI AKAN MEMBENTUK FIELD BARU YANG BERNAMA product_count
+        $category = Category::withCount(['child', 'product'])->find($id);
+        //KEMUDIAN PADA IF STATEMENTNYA KITA CEK JUGA JIKA = 0
+        if ($category->child_count == 0 && $category->product_count == 0) {
             $category->delete();
-            //DAN REDIRECT KEMBALI KE HALAMAN LIST KATEGORI
             return redirect(route('category.index'))->with(['success' => 'Kategori Dihapus!']);
         }
-        //SELAIN ITU, MAKA REDIRECT KE LIST TAPI FLASH MESSAGENYA ERROR YANG BERARTI KATEGORI INI SEDANG DIGUNAKAN
         return redirect(route('category.index'))->with(['error' => 'Kategori Ini Memiliki Anak Kategori!']);
-    }
-
-    //MUTATOR
-    public function setSlugAttribute($value)
-    {
-        $this->attributes['slug'] = Str::slug($value);
-    }
-
-    //ACCESSOR
-    public function getNameAttribute($value)
-    {
-        return ucfirst($value);
     }
 }

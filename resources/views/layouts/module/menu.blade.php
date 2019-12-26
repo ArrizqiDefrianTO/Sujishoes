@@ -7,7 +7,7 @@
             </li>
 
             <li>
-                <a href="{{url ('/Products')}}">Shop</a>
+                <a href="{{url ('/product')}}">Shop</a>
             </li>
 
             <li>

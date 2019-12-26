@@ -1,0 +1,18 @@
+[2019-12-19 01:16:11] local.ERROR: Argument 1 passed to Illuminate\Console\Application::add() must be an instance of Symfony\Component\Console\Command\Command, instance of App\Http\Middleware\CustomerAuthenticate given, called in C:\xampp\htdocs\sujishoes\vendor\laravel\framework\src\Illuminate\Console\Application.php on line 258 {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Argument 1 passed to Illuminate\\Console\\Application::add() must be an instance of Symfony\\Component\\Console\\Command\\Command, instance of App\\Http\\Middleware\\CustomerAuthenticate given, called in C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php on line 258 at C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php:230)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(258): Illuminate\\Console\\Application->add(Object(App\\Http\\Middleware\\CustomerAuthenticate))
+#1 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(272): Illuminate\\Console\\Application->resolve('App\\\\Http\\\\Middle...')
+#2 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(343): Illuminate\\Console\\Application->resolveCommands(Array)
+#3 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->getArtisan()
+#4 C:\\xampp\\htdocs\\sujishoes\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-12-19 01:16:40] local.ERROR: Argument 1 passed to Illuminate\Console\Application::add() must be an instance of Symfony\Component\Console\Command\Command, instance of App\Http\Middleware\CustomerAuthenticate given, called in C:\xampp\htdocs\sujishoes\vendor\laravel\framework\src\Illuminate\Console\Application.php on line 258 {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Argument 1 passed to Illuminate\\Console\\Application::add() must be an instance of Symfony\\Component\\Console\\Command\\Command, instance of App\\Http\\Middleware\\CustomerAuthenticate given, called in C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php on line 258 at C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php:230)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(258): Illuminate\\Console\\Application->add(Object(App\\Http\\Middleware\\CustomerAuthenticate))
+#1 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(272): Illuminate\\Console\\Application->resolve('App\\\\Http\\\\Middle...')
+#2 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(343): Illuminate\\Console\\Application->resolveCommands(Array)
+#3 C:\\xampp\\htdocs\\sujishoes\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Foundation\\Console\\Kernel->getArtisan()
+#4 C:\\xampp\\htdocs\\sujishoes\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

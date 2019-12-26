@@ -2,12 +2,20 @@
 <!-- KETIKA MELOAD FILE BLADE, MAKA EKSTENSI .BLADE.PHP TIDAK PERLU DITULISKAN -->
 @extends('layouts.admin')
 
+<<<<<<< HEAD
 <!-- TAG YANG DIAPIT OLEH SECTION('TITLE') AKAN ME-REPLACE @YIELD('TITLE') PADA MASTER LAYOUTS -->
+=======
+<!-- TAG YANG DIAPIT OLEH SECTION('TITLE') AKAN ME-REPLACE @/YIELD('TITLE') PADA MASTER LAYOUTS -->
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b
 @section('title')
     <title>Dashboard</title>
 @endsection
 
+<<<<<<< HEAD
 <!-- TAG YANG DIAPIT OLEH SECTION('CONTENT') AKAN ME-REPLACE @YIELD('CONTENT') PADA MASTER LAYOUTS -->
+=======
+<!-- TAG YANG DIAPIT OLEH SECTION('CONTENT') AKAN ME-REPLACE @/YIELD('CONTENT') PADA MASTER LAYOUTS -->
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b
 @section('content')
 <main class="main">
     <ol class="breadcrumb">
@@ -60,4 +68,8 @@
         </div>
     </div>
 </main>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> 4d727eff2402081a3f655c540b427aa61d44e22b

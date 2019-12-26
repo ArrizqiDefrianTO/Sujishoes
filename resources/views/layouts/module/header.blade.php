@@ -17,7 +17,7 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <img class="img-avatar" src="{{ asset('assets/img/avatars/user.png') }}" alt="admin@bootstrapmaster.com">
+                <img class="img-avatar" src="{{ asset('assets/img/user.png') }}" alt="admin@bootstrapmaster.com">
             </a>
         <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
@@ -27,14 +27,14 @@
             <a class="dropdown-item" href="#">
                 <i class="fa fa-shield"></i> Lock Account
             </a>
-            {{-- <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 <i class="fa fa-lock"></i> Logout
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-            </form> --}}
+            </form>
         </div>
         </li>
     </ul>
